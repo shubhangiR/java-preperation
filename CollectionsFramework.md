@@ -14,18 +14,17 @@ A Collections framework contains the following :
 
 # Interface, class, extends, implements . . . </br>Who does what?
 ===
-- An interface cannot implement another interface.
-  ```
+- An interface cannot implement another interface.</br>
+  ```java
   public interface A {
     // method signatures
   }
-  ```
-  ```
-  public interface B ~~implements~~ A ---> invalid
+  public interface B  ~~implements~~ A ---> invalid {}
   ```
   Unlike word "implements" suggests, we are not implementing any method in interface B, hence, not allowed.
 - One interface and extend one or more interfaces.
-  ```
+
+  ```java
   public interface C {
     // method signatures
   }
@@ -35,7 +34,7 @@ A Collections framework contains the following :
   }
   ```
 - One class can implement one or more interfaces.
-  ```
+  ```java
   public class D implements A, C {
     // method implementations
   }
@@ -45,14 +44,14 @@ A Collections framework contains the following :
   }
   ```
 - A class cannot extend multiple classes. A class can extend only one parent class.
-  ```
+  ```java
   public class F {
     // method implementations
   }
   public class G {
     // method implementations
   }
-  public class H ~~extends~~ F, G --> Invalid
+  public class H ~~extends~~ F, G {} --> Invalid
 
-  public class H extends G --> Valid
+  public class H extends G {} --> Valid
   ```
